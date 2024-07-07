@@ -9,10 +9,11 @@
       <h1 id="title">AxionFlow Survey Form</h1>
       <p id="description">Thank you for taking the time to help us improve our agency</p>
     </header>
+    <div class="survey-form">
     <form id="survey-form">
-      <label id="name-label" for="name">Name<input id="name" type="text" placeholder="Enter your name"></label>
-      <label id="email-label" for="email">Email<input id="email" type="email" placeholder="Enter your Email"></label>
-      <label id="number-label" for="age">Age<input type="number" id="age" min="13" max="120"</label>
+      <label id="name-label" for="name">Name<input required id="name" type="text" placeholder="Enter your name"></label>
+      <label id="email-label" for="email">Email<input required id="email" type="email" placeholder="Enter your email"></label>
+      <label id="number-label" for="age">Age<input type="number" placeholder="Enter your age" id="number" min="13" max="120"></label>
       <label for="dropdown">Which option best describes your current role?
       <select id="dropdown">
         <option>Select an option</option>
@@ -22,7 +23,21 @@
         <option>Other</option>
       </select>
     </label>
-    <label id="radio-label">
+    <label id="radio-label">What is the service you want to focus <strong>the most</strong> on?</label>
+      <label for="serLEAD"><input type="radio" value="serLEAD" id="serLEAD" checked name="service">Lead Generation</label>
+      <label for="serMANAGE"><input type="radio" value="serMANAGE" name="service" id="serMANAGE">Social Media Management</label>
+      <fieldset>
+      <legend>Desired Outcomes by the end of the month</legend>
+      <label><input type="checkbox" name="outcomes" value="outLeads" id="outLeads">100 Qualified Leads</label>
+     <label> <input type="checkbox" name="outcomes" value="outViews" id="outViews">1,000,000+ Video Views</label>
+      <label><input type="checkbox" name="outcomes" value="outClicks" id="outClicks">10,000+ Clicks</label>
+      <label><input type="checkbox" name="outcomes" value="outCloses" id="outCloses">5+ Clients Closed DFY</label>
+      <label><input type="checkbox" name="outcomes" value="outReviews" id="outReviews">100+ Google Reviews</label>
+      </fieldset>
+      <label>Any Additional service you desire<textarea style="min-width: 80%; max-width: 100%; max-height: 100px;" placeholder="I would love to have website development as an additional..."></textarea></label>
+      <button type="submit" id="submit">Submit</button>
+     
     </form>
+  </div>
   </div>
 </body>
