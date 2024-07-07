@@ -1,19 +1,59 @@
+header{
+  text-shadow: 5px 5px 40px #000;
+}
 body{
-    background-image:url(https://wallpapercave.com/wp/wp12544945.jpg);
-    font-size: 16px;
-    font-family: Tahoma;
-    color: white;  
-  }
-  h1,p{
-    text-align: center;
-  }
-  label,textarea,input{
-    display: block;
-    margin: 1em auto;
-    width: 100%;
-    height: 2em;
-  }
-  label{
-    height: unset;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  background-image:url(https://wallpapercave.com/wp/wp12544945.jpg);
+  font-size: 16px;
+  font-family: Tahoma;
+  color: white;  
+
+}
+.survey-form{
+  font-family: Montserrat;
+  width: 80%;
+  height: 100vh;
+  background-color: rgba(0, 246, 164, 0.8);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+}
+h1,p{
+  margin: 1em auto;
+  text-align: center;
+}
+button,label,textarea,input,select{
+  font-family: Montserrat;
+  font-weight: 500;
+  display: block;
+  margin: 1em auto;
+  width: 98%;
+  height: 3em;
+  border-radius: 5px;
+}
+label{
+  height: unset;
+}
+input[type="radio"],[type="checkbox"]{
+  width: 5%;
+  height: 5%;
+  display: inline;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+legend{
+  font-weight: 600;
+  text-align: center;
+}
+fieldset{
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: white;
+}
+textarea{
+  text-size: 32px;
+}
