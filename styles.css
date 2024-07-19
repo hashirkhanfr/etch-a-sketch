@@ -60,3 +60,55 @@ button[type="submit"]{
   color:rgb(255, 248, 208);
   text-align: center;
 }
+
+/* SEARCH STUFF */
+.search-contain{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: rgb(51, 250, 174);
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    margin:20px;
+}
+.search div{
+    display: inline-block;
+    filter: drop-shadow(0 1px rgb(0, 196, 121));
+    position: relative;
+}
+.search div::after{
+    content: " ";
+    width: 4px;
+    height: 20px;
+    background: white;
+    top: 40px;
+    right: 2px;
+    position: absolute;
+    transform: rotate(135deg);
+}
+.search div input{
+    font-size: 16px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border: solid 3px white;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+.search div input::placeholder{
+    opacity: 0;
+    color: #efefef;
+    transition: opacity 150ms ease-out;
+}
+.search div input:focus::placeholder{
+    opacity: 1;
+}
+.search div input:focus,
+.search div input:not(:placeholder-shown){
+    width: 400px;
+} 
