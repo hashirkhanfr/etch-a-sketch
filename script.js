@@ -10,10 +10,13 @@ function generateGrids(boxCount){
 }
 
 function calculateBoxesSize(boxCount) {
-    let boxSize = 500 / boxCount;
+    let boxSize = 100 / boxCount;
     let boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
-        box.style.cssText = `height:${boxSize}px; width:${boxSize}px;`;
+        box.style.cssText = `height:${boxSize}%; width:${boxSize}%;`;
+        box.addEventListener("mouseover",()=>{
+            box.style.backgroundColor= "black";
+        })
     });
 }
 
