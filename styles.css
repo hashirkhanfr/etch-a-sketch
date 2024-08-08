@@ -1,114 +1,59 @@
-header{
-  text-shadow: 5px 5px 40px #000;
+html{
+    font-family: Tahoma,sans-serif;
+    background-color: #fff8bd;
+    text-align: center;
 }
-body{
-  background-image:url(https://wallpapercave.com/wp/wp12544945.jpg);
-  font-size: 16px;
-  font-family: Tahoma;
-  color: white;  
-
+button{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background: linear-gradient(rgb(130, 255, 47),rgb(0, 199, 66));
+    font-size: 1rem;
+    font-weight: 1000;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px rgb(102, 255, 0);
+    border: 1px solid rgb(0, 92, 0);
+    color: white;
 }
-.survey-form{
-  font-family: Montserrat;
-  width: 80%;
-  height: 100%;
-  background-color: rgba(0, 246, 164, 0.8);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
-}
-h1,p{
-  margin: 1em auto;
-  text-align: center;
-}
-button,label,textarea,input,select{
-  font-family: Montserrat;
-  font-weight: 500;
-  display: block;
-  margin: 1em auto;
-  width: 98%;
-  height: 3em;
-  border-radius: 5px;
+h1{
+    text-shadow: 0px 0px 20px rgb(110, 110, 110);
+    text-align: center;
 }
 label{
-  height: unset;
+    display: block;
+    font-size: 2rem;
 }
-input[type="radio"],[type="checkbox"]{
-  width: 5%;
-  height: 5%;
-  display: inline;
-  margin: 0 0.5em 0 0;
-  vertical-align: middle;
+input{
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: linear-gradient(rgb(255, 174, 0),rgb(216, 115, 0));
+    font-size: 1rem;
+    font-weight: 1000;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px #c55f00;
+    border: none;
+    color: white;
+
 }
-legend{
-  font-weight: 600;
-  text-align: center;
-}
-fieldset{
-  border-radius: 5px;
-  border-width: 2px;
-  border-color: white;
-}
-textarea{
-  text-size: 32px;
-}
-button[type="submit"]{
-  background-color: rgb(47, 47, 47);
-  color:rgb(255, 248, 208);
-  text-align: center;
+button:active{
+    transform: scale(1.1);
+    transition-duration: 0.2ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1ms;
+
 }
 
-/* SEARCH STUFF */
-.search-contain{
+#parent-div{
     display: flex;
-    height: 100%;
-    width: 100%;
-    background: rgb(51, 250, 174);
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    align-content: baseline;
+    margin: 20px auto;
 }
-.search{
-    margin:20px;
+.box{
+    background-color: white;
 }
-.search div{
-    display: inline-block;
-    filter: drop-shadow(0 1px rgb(0, 196, 121));
-    position: relative;
+.box:hover{
+    background-color: black;
 }
-.search div::after{
-    content: " ";
-    width: 4px;
-    height: 20px;
-    background: white;
-    top: 40px;
-    right: 2px;
-    position: absolute;
-    transform: rotate(135deg);
-}
-.search div input{
-    font-size: 16px;
-    background: transparent;
-    width: 25px;
-    height: 25px;
-    color: white;
-    padding: 10px;
-    outline: none;
-    border: solid 3px white;
-    border-radius: 35px;
-    transition: width 0.5s;
-}
-.search div input::placeholder{
-    opacity: 0;
-    color: #efefef;
-    transition: opacity 150ms ease-out;
-}
-.search div input:focus::placeholder{
-    opacity: 1;
-}
-.search div input:focus,
-.search div input:not(:placeholder-shown){
-    width: 400px;
-} 
