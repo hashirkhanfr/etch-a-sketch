@@ -5,34 +5,32 @@ let sliderColor = document.querySelector("#brush-size");
 let buttonColor = document.querySelector(".type-color");
 let buttonRandom = document.querySelector(".type-randomized");
 let buttonDarken = document.querySelector(".type-darken");
-let penType;
-brushSize.addEventListener("change",()=>{
+let penType = 'color';
+function generateDivs(){
     paintDiv.innerHTML = ` `;
     for (let i = 1; i <= (brushSize.value * brushSize.value) ; i++){
         paintDiv.innerHTML += `<div style="background-color: white; width:${800/brushSize.value}px ; height: ${800/brushSize.value}px;" class="theBox"></div>`
         }
-    let paintBox = document.querySelectorAll(".theBox");
-    console.log(paintDiv);
-    console.log(paintBox);
-    paintBox.forEach(box => {
-        box.addEventListener("mouseover",()=>{
-            if (penType == 'color'){
-                box.style.opacity = "100%";
-                box.style.backgroundColor = `${brushColor.value}`;
-            }
-            
-            else if (penType == 'random'){
-                box.style.opacity = "100%";
-                box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
-            }
-            else{
-            box.style.cssText += `background-color:${brushColor.value} ; opacity:${(box.style.opacity * 100) + 10}% `
-            }
-        })
-    });
-
+        let paintBox = document.querySelectorAll(".theBox");
+        paintBox.forEach(box => {
+            box.addEventListener("mouseover",()=>{
+                if (penType == 'color'){
+                    box.style.opacity = "100%";
+                    box.style.backgroundColor = `${brushColor.value}`;
+                }
+                
+                else if (penType == 'random'){
+                    box.style.opacity = "100%";
+                    box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
+                }
+                else{
+                box.style.cssText += `background-color:${brushColor.value} ; opacity:${(box.style.opacity * 100) + 10}% `
+                }
+            })
+        });
+    
 }
-)
+brushSize.addEventListener("change",generateDivs)
 
 
 buttonColor.addEventListener("click",()=>{
@@ -54,3 +52,5 @@ buttonDarken.addEventListener("click",()=>{
     buttonRandom.style.cssText = "background-color: white;"
     buttonColor.style.cssText = "background-color: white;"
 })
+
+generateDivs();
