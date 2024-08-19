@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to SketchBob,where dream comes true</h1>
-    <section>
-        <label>How many boxes per side?   <input  placeholder="e.g 16" type="number" id="amountOfDivs"></label>
-        <button id="mySubmit">Submit</button>
-        <div id="parent-div">
-            <div class="box"></div>
-        </div>
+    <header>
+        <h1>Spongebob SquarePaints</h1>
+        <h2>Where dreams come true</h2>
+    </header>
+    <section class="main-section">
+        <section class="selections-section">
+            <div class="brush-size-container">
+                <p>Brush Size</p>
+                <input id="brush-size" type="range" min="16" max="50">
+            </div> 
+            <div class="brush-type-container">
+                <div class="brush-color-container">
+                <p>Brush Color</p>
+                <input id="brush-color" type="color">
+                </div>
+                <button class="type-color">Color</button>
+                <button class="type-randomized">Randomized</button>
+                <button class="type-darken">Darkening</button>
+            </div>
+        </section>
+        <section class="painting-section">
+            <div class="painting-container">
+                <div class="theBox"></div>
+            </div>
+        </section>
     </section>
     <script src="script.js"></script>
 </body>
