@@ -30,6 +30,11 @@ function generateDivs(){
         });
     
 }
+
+function setWhiteButtonColor(btn1,btn2){
+    btn1.style.cssText = "background-color:white;"
+    btn2.style.cssText = "background-color:white;"
+}
 brushSize.addEventListener("change",generateDivs)
 
 
@@ -37,20 +42,17 @@ buttonColor.addEventListener("click",()=>{
     penType = 'color';
     buttonColor.style.backgroundColor = `${brushColor.value}`;
     sliderColor.style.accentColor = `${brushColor.value}`;
-    buttonRandom.style.cssText = "background-color: white;"
-    buttonDarken.style.cssText = "background-color: white;"
+    setWhiteButtonColor(buttonRandom,buttonDarken);
 })
 buttonRandom.addEventListener("click",()=>{
     penType = 'random';
     buttonRandom.style.cssText = "animation: lightfade 1s ease-in-out 0.1ms infinite;";
-    buttonColor.style.cssText = "background-color: white;"
-    buttonDarken.style.cssText = "background-color: white;"
+    setWhiteButtonColor(buttonColor,buttonDarken);
 })
 buttonDarken.addEventListener("click",()=>{
     penType = 'darken';
     buttonDarken.style.backgroundColor = `${brushColor.value}`;
-    buttonRandom.style.cssText = "background-color: white;"
-    buttonColor.style.cssText = "background-color: white;"
+    setWhiteButtonColor(buttonRandom,buttonColor);
 })
 
 generateDivs();
