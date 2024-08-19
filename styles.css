@@ -3,7 +3,7 @@ html{
 }
 @font-face {
     font-family: 'spongeboy';
-    src: url('/spongeboy-font/SpongeboyRegular-gx2n6.otf');
+    src: url('./spongeboy-font/SpongeboyRegular-gx2n6.otf');
   }
 body{
     font-family: 'spongeboy','Poppins',sans-serif;
