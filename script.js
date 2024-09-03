@@ -19,7 +19,7 @@ function generateDivs(){
     paintDiv.innerHTML = proxyDivHTML;
     let paintBox = document.querySelectorAll(".theBox");
     paintBox.forEach(box => {
-        box.addEventListener("mousemove",()=>{
+        box.addEventListener("mouseover",()=>{
             if (penType == 'color'){
                 box.style.opacity = "100%";
                 box.style.backgroundColor = `${brushColor.value}`;
